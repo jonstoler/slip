@@ -1,0 +1,115 @@
+%!PS
+<< /PageSize [842 595] /Orientation 0 >> setpagedevice
+
+/F { exch selectfont } def
+/FMainTitle { 48 /Helvetica-Bold F } def
+/FAuthor { 36 /Helvetica F } def
+/FBigTitle { 64 /Helvetica-Bold F } def
+/FTitle { 48 /Helvetica-Bold F } def
+/FPoint { 36 /Helvetica F } def
+/FCode { 36 /Courier F } def
+
+/w { 842 } def
+/h { 595 } def
+/hw { w 2 div } def
+/hh { h 2 div } def
+
+/pagesetup { 0 0 0 setrgbcolor } def
+/P { showpage pagesetup } def
+/S { show } def
+
+/mv { exch moveto } def
+
+/center { dup stringwidth pop 2 div neg 0 rmoveto } def
+
+/maintitle { 0 0 0 setrgbcolor 330 hw mv FMainTitle center S } def
+/author { 0.5 0.5 0.5 setrgbcolor 270 hw mv FAuthor center S } def
+/bigtitle { hh hw mv FBigTitle center S } def
+/title { 500 hw mv FTitle center S } def
+/pt { gsave currentpoint exch 20 sub exch 9 add 6 0 360 arc closepath 0 setgray fill grestore } def
+
+/br { 100 currentpoint exch pop moveto 0 45 neg rmoveto } def
+/toofar? { dup stringwidth pop currentpoint pop add 742 gt } bind def
+/showword { toofar? {br} if show } def
+/wrap { {( ) search exch showword not {exit} if show} loop} def
+
+pagesetup
+(slip) maintitle
+(Jonathan Stoler) author
+P
+(welcome to slip.) bigtitle
+0.8 0.8 0.8 setrgbcolor	
+80 20 682 3 rectfill
+0.6 0.6 0.6 setrgbcolor
+80 20 137 3 rectfill
+P
+(what is slip?) title
+400 100 mv
+pt
+FPoint (tiny slideshow file format) wrap
+100 currentpoint exch pop moveto
+0 80 neg rmoveto
+pt
+FPoint (open source) wrap
+100 currentpoint exch pop moveto
+0 80 neg rmoveto
+pt
+FPoint (plaintext!) wrap
+100 currentpoint exch pop moveto
+0 80 neg rmoveto
+0.8 0.8 0.8 setrgbcolor	
+80 20 682 3 rectfill
+0.6 0.6 0.6 setrgbcolor
+80 20 273 3 rectfill
+P
+(let's (w)rap.) title
+400 100 mv
+pt
+FPoint (speak your mind! long points will wrap when necessary, but make sure they are 140 characters or less - or slip will automatically cut them o) wrap
+100 currentpoint exch pop moveto
+0 80 neg rmoveto
+0.8 0.8 0.8 setrgbcolor	
+80 20 682 3 rectfill
+0.6 0.6 0.6 setrgbcolor
+80 20 410 3 rectfill
+P
+(three ways to play) title
+400 100 mv
+pt
+FPoint (normal point.) wrap
+100 currentpoint exch pop moveto
+0 80 neg rmoveto
+pt
+FCode (code.) wrap
+100 currentpoint exch pop moveto
+0 80 neg rmoveto
+0.8 0.8 0.8 setrgbcolor	
+80 20 682 3 rectfill
+0.6 0.6 0.6 setrgbcolor
+80 20 546 3 rectfill
+P
+(three ways to play) title
+400 100 mv
+pt
+FPoint (normal point.) wrap
+100 currentpoint exch pop moveto
+0 80 neg rmoveto
+pt
+FCode (code.) wrap
+100 currentpoint exch pop moveto
+0 80 neg rmoveto
+pt
+FPoint (hidden point.) wrap
+100 currentpoint exch pop moveto
+0 80 neg rmoveto
+0.8 0.8 0.8 setrgbcolor	
+80 20 682 3 rectfill
+0.6 0.6 0.6 setrgbcolor
+80 20 546 3 rectfill
+P
+(and that's all there is to it.) bigtitle
+0.8 0.8 0.8 setrgbcolor	
+80 20 682 3 rectfill
+0.6 0.6 0.6 setrgbcolor
+80 20 682 3 rectfill
+P
